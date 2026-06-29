@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 15px;
+  font-family: "Lexend", sans-serif;
+}
+
+.page {
+  margin: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  max-width: 1440px;
+  height: 480px;
+  display: flex;
+  align-items: center;
+}
+.box {
+  padding: 40px;
+  color: white;
+  height: 100%;
+}
+h1 {
+  font-family: "Big Shoulders", sans-serif;
+  text-transform: uppercase;
+}
+p {
+  height: 230px;
+  color: #ffffffbf;
+  margin: 0;
+  line-height: 1.8;
+}
+a {
+  background-color: white;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 27px;
+  font-weight: bold;
+  display: block;
+  width: fit-content;
+  transition: 0.3s;
+  position: relative;
+}
+a::before {
+  content: "";
+  border-radius: 27px;
+  width:calc(100% - 4px);
+  height:calc(100% - 4px);
+  border:2px solid white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% , -50%);
+}
+.box.sedans {
+  background-color: #e38826;
+}
+.box.sedans a {
+  color: #e38826;
+}
+.box.sedans a:hover {
+  background-color: #e38826;
+  color: white;
+}
+.box.suvs {
+  background-color: #006970;
+}
+.box.suvs a {
+  color: #006970;
+}
+.box.suvs a:hover {
+  background-color: #006970;
+  color: white;
+}
+.box.luxury {
+  background-color: #004241;
+}
+.box.luxury a {
+  color: #004241;
+}
+.box.luxury a:hover {
+  background-color: #004241;
+  color: white;
+}
+@media (max-width:767px) {
+  .page {
+    margin: auto;
+    flex-direction: column;
+    max-width: 360px;
+    height: fit-content;
+  }
+}
